@@ -1,0 +1,312 @@
+                                           -----------Python Notları-----------
+
+  Hata ayıklayıcı -> Debugger
+  Derleyici (compiler) -> Kodları elektriksel sinyallere dönüştürme ve kod çalışmadan kodu en iyi hale getirmeye denir.
+  Üst düzey program koduna, kaynak kod (source code) denir. Kaynak koda karşılık gelen dile hedef kod (target code) denir.
+  Sırası gelmeyen kodu çalıştırmayan fakat hataları görmeyen ve iyileştirme yapamayan çeviriciye yorumlayıcı (interpreter) denir.
+
+  Python Nedir?
+
+  Daha az kodla daha büyük işler yapmaya yarayan ücretsiz yazılım platformudur.
+
+             --- VERİ TÜRLERİ ---
+
+  string: Karakter dizileri. Tırnak içindeki her türlü karakterlerdir.
+
+  >>>“Merhaba Dünya”
+  ‘Merhaba Dünya’
+
+  NOT: Python'da üç tırnak metni alt satıra geçirebilmek içindir.
+
+  print('''Python
+  Ders
+  Notları''')
+
+  Çıktı:
+  Python
+  Ders
+  Notları
+  
+  integer: Tam sayılar. - sonsuzdan + sonsuza kadar bütün sayılar.
+  
+  float: Reel sayılar. Kayan noktalı sayılar. *Virgül yerine nokta kullanılmalıdır!*
+  Örnek : 12.6, 14.2, 1.5
+
+  complex: Karmaşık sayılar.
+  Örnek : 26+4i
+ 
+  bool: İfadenin doğruluğunu ya da yanlışlığını sorgular.
+
+             --- FONKSİYONLAR ---
+
+     print(): Ekrana yazdırma fonksiyonudur.
+
+  print("Selam")
+  Çıktı:
+  Selam
+
+  print(Selam)  ----> Hatalı.
+  Çıktı: Yok. Tırnak kullanılmalıdır.
+  
+  print("bahçe"+"şehir")
+  Bahçeşehir
+
+  print(1)       1
+  print("1")    '1'
+  
+
+     type(): Verilerin tipini sorgular.
+
+  type("Merhaba")  <class 'str'>
+  type(“”)         <class 'str'>
+  type("4")        <class "str">
+  type(4)          <class "int">
+  type(4.0)        <class 'float'>
+  
+
+     str(): Verileri string'e çevirir.
+
+  str(4)     '4'
+  str(6.2)   '6.2'
+
+     int(): Verileri integer’a (tamsayı) çevirir.
+
+  int(“28.9”) 28
+  int(0.8+0.9) 1
+
+     float(): Verileri float'a (reel sayı) çevirir.
+
+  float(3) 3.0
+  float(0) 0.0
+
+     len(): stringlerin uzunluğunu ölçmek içindir.
+
+  len("Bahçeşehir")    10
+  len("Üniversitesi")  12
+
+  len("Bahçeşehir Üniversitesi")  23 (Boşluklar sayılır.)
+  len("ApplyBau")+len("Eray")     12
+  len("ApplyBau")-len("Eray")     4
+
+          --- Matematiksel İfadeler ---
+
+  Çarpma : *
+  Tam Bölme: //
+  Üs Alma : **
+  Mod : %
+
+  5**2      25
+  pow(5,2)  25
+
+  Yuvarlama İşlemi: round(28.71)  29
+
+  _ (alt çizgi işareti): Son verinin değerini hafızada tutar.
+
+  >>>11+3  14
+  >>>_     14
+
+  >>> "https://"
+  'https://'
+  >>> _ + "bau.edu.tr"
+  'https://bau.edu.tr'
+
+          --- Değişkenler ---
+
+  Sayı ile başlamaz!
+
+  5_kilo_muz = "15 TL"  Yanlış
+  kilo_muz_5 = "15 TL"  Doğru
+
+  Özel sembol içeremez! (_ Hariç)
+
+  gider?= "500 TL"      Yanlış
+  kullanici_adi= "Eray" Doğru
+
+          --- Python'a Özel İfadeler ---
+
+  'False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class',
+  'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from',
+  'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or',
+  'pass', 'raise', 'return', 'try', 'while', 'with', 'yield'
+
+
+  ÇOKLU ATAMA:
+
+  >>> x, y, z = 4,3,2
+  >>> print(x*y-z)   4*3-2
+  10
+ 
+  >>> x, y, z = 5,6,7
+  >>> print("x =", x, " y =", y, " z =", z)
+  x = 5 y = 6 z = 7 
+
+  DEĞİŞKEN TAKASI:
+
+  >>> x,y,z=4,3,2
+  >>> x,y,z=y,z,x   x, y oldu
+                    y, z oldu
+                    z, x oldu
+
+  >>> print(z**y*x)   4**2*3
+  48
+          --- HATALAR ---
+
+  Hatalı atama işlemi:
+
+  >>>y = 5           Doğrusu:  y = 5
+  >>>x + 2 = y                 x=y-2 
+  >>>print(x)                  print(x)
+                               3 
+
+  Eksik Parantez Kullanımı:
+
+  print(1(2+3)   Yanlış
+  print(1(2+3))  Doğru
+
+  Eşleşmeyen Tırnak İşareti:
+
+  print('Merhaba")  Yanlış
+  print("Merhaba")  Doğru
+  print('Merhaba')  Doğru
+
+  Atanmayan Değişkenler:
+
+  x=5
+  print(x+y)   y değeri verilmedi kod çalışmaz.
+
+  x=5
+  y=4
+  print(x+y)
+  9
+
+  Sıfıra bölmeye çalışmak. Tanımı yoktur:
+
+  24/0  Yanlış
+  
+  Sayıları string'e bölmeye çalışmak:
+
+  print(5/"a")
+
+  Hiç gerçekleşmeyecek koşullar:
+
+  if 5>400
+      print("Apply Bau")
+
+  Mantık hataları:
+  
+  İstenilen işlem gerçekleşmez ancak sistem çalışır. Ayıklanması en zor hata türü.
+
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+     
+
+  
+  
